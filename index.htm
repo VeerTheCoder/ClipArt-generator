@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Clipart generator</title>
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+		@import url('https://fonts.googleapis.com/css2?family=Rubik+Distressed&display=swap');
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Oswald', sans-serif;
+		}
+		body{
+			width: 100vw;
+			height: 100vh;
+			overflow: hidden;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			background-image: url('https://image.slidesdocs.com/responsive-images/background/geometric-memphis-hs-electives-sociology-subject-for-high-school-9th-grade-concepts-in-probability-and-statistics-abstract-powerpoint-background_3517d8e67b__960_540.jpg');
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		h2{
+			font-size: 30px;
+			letter-spacing: 2px;
+			text-transform: capitalize;
+			word-spacing: 3px;
+			font-weight: 1000;
+			text-shadow: 0 22px 30px rgba(0,0,0,0.9);
+			padding-bottom: 10px;
+		}
+		h2 span{
+			font-size: 55px;
+			text-transform: uppercase;
+			font-family: 'Rubik Distressed', cursive;
+			position: relative;
+		}
+		h2 span::after{
+			content: "CLIPART";
+			position: absolute;
+			top: 0;
+			left: 0;
+			color: red;
+			animation: chan 1s linear infinite alternate;
+		}
+		@keyframes chan{
+			0%{
+				color: white;
+			}
+			50%{
+				color: skyblue;
+			}
+			100%{
+				color: green;
+			}
+		}
+		header{
+			height: 70vh;
+			width: 70vw;
+			border-radius: 20px;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			align-items: center;
+			box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+		}	
+		label{
+			font-size: 30px;
+			color: black;
+			padding-bottom: 20px;
+			letter-spacing: 4px;
+			text-transform: capitalize;
+			font-family: 'Rubik Distressed', cursive;
+		}
+		input{
+			outline: none;
+			background: none;
+			width: 200px;
+			height: 30px;
+			transition: .3S;
+			animation: rot 2s linear infinite alternate;
+		}
+		@keyframes rot{
+			0%{
+				transform: translateX(0px) rotate(0deg);
+			}
+			33%{
+				transform: translateX(300px) rotate(360deg);
+			}
+			66%{
+				transform: translateX(0px) rotate(90deg);
+			}
+			100%{
+				transform: translateX(-300px) rotate(360deg);
+			}
+		}
+		input:hover{
+			animation: none;
+		}
+		input[type=text]{
+			font-size: 25px;
+			text-align: center;
+			font-family: 'PT Sans', sans-serif;
+		}
+		header img{
+			width: 200px;
+			height: auto;
+			padding: 20px 0;
+			animation:mov 2s linear infinite alternate;
+		}
+		button{
+			width: 200px;
+			font-size: 25px;
+			background: #00a8ff;
+			color: white;
+			border-radius: 10px;
+			transition: .5s;
+			animation:mov 2s linear infinite alternate;
+		}
+		button:hover{
+			color:white;
+			background: #fbc531;
+			cursor: pointer;
+			box-shadow: -4px 3px 7px 10px rgba(117,117,117,1);
+		}
+		@keyframes mov{
+			0%{
+				transform: translateX(20px) rotate(-5deg);
+			}
+			100%{
+				transform: translateX(-20px) rotate(5deg);
+			}
+		}
+
+	/*Make responsive*/
+		@media (min-width: 250px) and (max-width: 549px){
+			h2{
+			font-size: 25px;
+			text-align: center;
+			background: rgba(999, 999,999, .3);
+			padding: 10px;
+		}
+		h2 span{
+			font-size: 40px;
+		}
+		header{
+			height: 60vh;
+			width: 80vw;
+		}	
+		label{
+			font-size: 25px;
+			color: blue;
+			padding-bottom: 40px;
+			letter-spacing: 2px;
+		}
+		input{
+			width: 170px;
+		}
+		header img{
+			width: 150px;
+		}
+		button{
+			width: 140px;
+		}
+		  @keyframes rot{
+			0%{
+				transform: translateX(0px) rotate(0deg);
+			}
+			100%{
+				transform: translateX(-10px) rotate(360deg);
+			}
+		  }
+		}
+		@media (min-width: 550px) and (max-width: 1140px){
+			h2{
+			text-align: center;
+			background: rgba(999, 999,999, .3);
+		}
+		  @keyframes rot{
+			0%{
+				transform: translateX(0px) rotate(0deg);
+			}
+			33%{
+				transform: translateX(100px) rotate(360deg);
+			}
+			66%{
+				transform: translateX(0px) rotate(90deg);
+			}
+			100%{
+				transform: translateX(-100px) rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body>
+	<h2>Make Your own <span>Clipart</span> as per your name</h2>
+<header>
+	<label>Enter your Name:</label><input type="text" id="name">
+	<img src="https://g4c.org.uk/wp-content/uploads/sites/2/2017/04/dummy-member.jpg" class="change">
+	<button>Check</button>
+</header>	
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('button').click(function(){
+			let x=$('#name').val();
+			if(x){
+			$('.change').attr('src',`https://joeschmoe.io/api/v1/${x}`);
+		}
+		else{
+			alert("Kindy Enter your Name");
+		}
+		});
+	});
+</script>
+</body>
+</html>
